@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Latin Study Group</title>
+  <style>
+    /* === Base === */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Arial Black', sans-serif; background: #111; color: #fff; overflow-x: hidden; }
+    h1, h2 { text-transform: uppercase; letter-spacing: 2px; }
+    a { text-decoration: none; color: inherit; }
+
+    /* === Header === */
+    header { background: #000; padding: 25px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 6px 15px rgba(0,0,0,0.7); }
+    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: auto; }
+    nav .logo { font-size: 2.4rem; font-weight: bold; color: #ffda00; text-shadow: 2px 2px #ff0066; }
+    nav ul { list-style: none; display: flex; gap: 35px; }
+    nav a { font-size: 1.4rem; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #ff0066; }
+
+    /* === Hero === */
+    .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+      background: linear-gradient(135deg, #ff0066, #ffda00, #00e1ff); background-size: 600% 600%; animation: gradientBG 15s ease infinite; padding: 30px; }
+    @keyframes gradientBG { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+
+    .scramble { font-size: 12rem; line-height: 1.1; text-shadow: 8px 8px 30px rgba(0,0,0,0.7); color: #fff; }
+    .hero p { font-size: 2.4rem; margin-top: 40px; max-width: 1000px; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
+    .domain { margin-top: 35px; font-size: 2.4rem; font-weight: bold; color: #000; background: #ffda00; padding: 15px 40px; border-radius: 50px; box-shadow: 0 0 25px #000; }
+    .cta-btns { margin-top: 60px; }
+    .hero button { font-size: 2rem; margin: 15px; padding: 22px 55px; border: none; border-radius: 55px; cursor: pointer; font-weight: bold; transition: 0.4s; }
+    .btn-primary { background: #ffda00; color: #000; }
+    .btn-primary:hover { background: #fff; transform: scale(1.15); box-shadow: 0 0 35px #ffda00; }
+    .btn-secondary { background: #ff0066; color: #fff; }
+    .btn-secondary:hover { background: #ff3385; transform: scale(1.15); box-shadow: 0 0 35px #ff0066; }
+
+    /* === Sections === */
+    section { padding: 120px 30px; text-align: center; }
+    section h2 { font-size: 4rem; margin-bottom: 30px; text-shadow: 2px 2px 10px rgba(0,0,0,0.6); }
+    section p { font-size: 1.8rem; max-width: 1000px; margin: auto; line-height: 2; }
+
+    #about { background: #222; }
+    #resources { background: #ff0066; }
+    #authors { background: #ffda00; color: #000; }
+    #events { background: #00e1ff; color: #000; }
+    #join { background: #222; }
+
+    /* === Footer === */
+    footer { background: #000; padding: 40px; text-align: center; font-size: 1.8rem; color: #ffda00; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">LatinStudyGroup.com</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#authors">Authors</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#join">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="scramble" id="scramble">Latin Study Group</div>
+    <p>"Latin lives on in our words, culture, and spirit — join the movement to revive it."</p>
+    <div class="domain">🌐 LatinStudyGroup.com</div>
+    <div class="cta-btns">
+      <button class="btn-primary" onclick="scrollToSection('join')">🔥 Join Us</button>
+      <button class="btn-secondary" onclick="scrollToSection('resources')">📚 Explore Resources</button>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>Our Mission</h2>
+    <p>Hello...Mia. This is where the MISSION STATEMENT goes. The site is just a rough draft now...but I wanted to start getting something up. Let's work on the ideas for this amazing group...study...and website!.</p>
+  </section>
+
+  <!-- Resources -->
+  <section id="resources">
+    <h2>Resources</h2>
+    <p>Unlock grammar charts, vocabulary drills, and ancient texts with modern tools. Learn faster, study smarter, and connect with centuries of knowledge.</p>
+  </section>
+
+  <!-- Authors -->
+  <section id="authors">
+    <h2>Classical Authors</h2>
+    <p>Cicero. Virgil. Ovid. Caesar. Explore their words in the original Latin and discover why their ideas still shape our world.</p>
+  </section>
+
+  <!-- Events -->
+  <section id="events">
+    <h2>Events & Battles</h2>
+    <p>Weekly study sessions. Translation duels. Mythology debates. Special lectures. The adventure never ends — see you at the next gathering.</p>
+  </section>
+
+  <!-- Join -->
+  <section id="join">
+    <h2>Join the Revolution</h2>
+    <p>Ready to bring Latin back to life? Sign up today and become part of something timeless and powerful.</p>
+    <div class="cta-btns">
+      <button class="btn-primary" onclick="alert('Membership form coming soon!')">⚡ Sign Up Now</button>
+      <button class="btn-secondary" onclick="alert('Contact form coming soon!')">✉️ Contact Us</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Latin Study Group — LatinStudyGroup.com — Omnia Vincit Amor 💛</p>
+  </footer>
+
+  <!-- Inline JS -->
+  <script>
+    // Smooth scroll
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Text Scramble Animation (slower + dramatic)
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    const target = "Latin Study Group";
+    let interval = null;
+
+    function scrambleEffect(element, text, delay = 80) {
+      let iteration = 0;
+      clearInterval(interval);
+
+      interval = setInterval(() => {
+        element.innerText = text.split("")
+          .map((char, index) => {
+            if (index < iteration) {
+              return text[index];
+            }
+            return letters[Math.floor(Math.random() * letters.length)];
+          })
+          .join("");
+
+        if (iteration >= text.length) {
+          clearInterval(interval);
+        }
+        iteration += 0.15; // slower settle
+      }, delay);
+    }
+
+    const scrambleEl = document.getElementById("scramble");
+    scrambleEffect(scrambleEl, target);
+  </script>
+</body>
+</html>
+
+
